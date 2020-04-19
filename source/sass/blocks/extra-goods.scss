@@ -1,0 +1,140 @@
+.extra-goods {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__section-title {
+      width: 100%;
+    }
+  }
+}
+
+.extra-goods__items {
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 69px;
+  }
+
+  @include desktop {
+    width: 895px;
+  }
+}
+
+.extra-goods__item {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  border-top: 1px solid $border-dark;
+
+  &:last-child {
+  border-bottom: 1px solid $border-dark;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: bottom;
+    padding-top: 15px;
+    padding-bottom: 26px;
+    padding-left: 5.4%;
+    padding-right: 5.4%;
+  }
+
+  @include desktop {
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 16px;
+  }
+}
+
+.extra-goods__title {
+  @include caps;
+  margin: 0;
+  margin-bottom: -1px;
+  font-size: 16px;
+  line-height: 1em;
+  font-weight: 400;
+  color: $text-two;
+
+  @include tablet {
+    min-width: 160px;
+    max-width: 30%;
+    margin-right: 5%;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1em;
+  }
+
+  @include desktop {
+    width: 320px;
+    margin-right: 20px;
+  }
+}
+
+.extra-goods__details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 1em;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    align-self: flex-end;
+    width: 65%;
+    margin-left: auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1em;
+  }
+
+  @include desktop {
+    align-items: flex-start;
+    max-width: 33%;
+    margin-right: 39px;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+  }
+}
+
+.extra-goods__size {
+  max-width: 70%;
+  margin-right: 5%;
+
+  @include tablet {
+    min-width: 130px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: 5%;
+    padding-top: 5px;
+    text-align: right;
+  }
+
+  @include desktop {
+    width: 193px;
+    margin-left: auto;
+    margin-right: 20px;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+.extra-goods__price {
+  max-width: 25%;
+  margin-left: auto;
+
+  @include tablet {
+    align-self: flex-end;
+    min-width: 65px;
+    max-width: 25%;
+    margin-left: 8px;
+    text-align: right;
+  }
+}
