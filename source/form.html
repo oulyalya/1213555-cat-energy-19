@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+  <main>
+    <h1>Подбор программы</h1>
+    <div class="container">
+    <form class="form" action="http://echo.htmlacademy.ru" method="get">
+      <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <fieldset>
+        <legend class="visually-hidden">Заполните данные о вашем питомце</legend>
+        <p>
+          <label class="form__label" for="cat-name">Имя:*</label>
+          <input class="form__input-text" type="text" id="cat-name" placeholder="Барсик">
+        </p>
+        <p>
+          <label class="form__label" for="cat-weight">Вес (кг):*</label>
+          <input class="form__input-text" type="text" id="cat-weight" placeholder="7">
+        </p>
+        <p>
+          <label class="form__label" for="cat-age">Возраст (лет):</label>
+          <input class="form__input-text" type="text" id="cat-age" placeholder="7">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend class="visually-hidden">Выберите программу питания</legend>
+        <p>
+          <input class="form__input form__input--radio" type="radio" name="programme" id="radio1" value="weight loss" checked>
+          <label class="form__label" for="radio1">
+            <span class="form__custom-radio"></span>
+            Похудение
+          </label>
+        </p>
+        <p>
+          <input type="radio" name="programme" id="radio2" value="gain mass">
+          <label class="form__label" for="radio2">
+            <span class="form__custom-radio"></span>
+            Набор массы
+          </label>
+        </p>
+        <p>
+          <input type="radio" name="programme" id="radio3" value="don't know">
+          <label class="form__label" for="radio3">
+            <span class="form__custom-radio"></span>
+            Не знаю (Нужен ваш совет)
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend class="form__group-name">Контактные данные (владельца кота)</legend>
+        <p><label class="form__label" for="email">E-mail:*</label>
+          <input class="form__input-text" type="email" id="email" placeholder="kuklachev@gmail.com"></p>
+        <p><label class="form__label" for="tel">Телефон:*</label>
+          <input class="form__input-text" type="tel" id="tel" placeholder="8 (960) 900-60-90"></p>
+      </fieldset>
+      <fieldset>
+        <legend class="form__group-name">Комментарий</legend>
+        <input type="textarea" placeholder="Расскажите обо всех повадках кота">
+      </fieldset>
+      <fieldset>
+        <legend class="form__group-name">Дополнительно</legend>
+        <p>
+          <input class="form__input form__input--checkbox" type="checkbox" id="check1" name="check1" checked>
+          <label class="form__label" for="check1">
+            <span class="form__custom-checkbox"></span>
+            Сахарозаменитель
+          </label>
+        </p>
+        <p>
+          <input class="form__input form__input--checkbox" type="checkbox" id="check2" name="check2">
+          <label class="form__label" for="check2">
+            <span class="form__custom-checkbox"></span>
+            Питьевая вода
+          </label>
+        </p>
+        <p>
+          <input class="form__input form__input--checkbox" type="checkbox" id="check3" name="check3">
+          <label class="form__label" for="check3">
+            <span class="form__custom-checkbox"></span>
+            Молоко
+          </label>
+        </p>
+        <p>
+          <input class="form__input form__input--checkbox" type="checkbox" id="check4" name="check4">
+          <label class="form__label" for="check4">
+            <span class="form__custom-checkbox"></span>
+            Витамины
+          </label>
+        </p>
+      </fieldset>
+      <input class="btn" type="submit" value="Отправить заявку">
+      <p>* — Обязательные поля</p>
+    </form>
+  </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+</body>
+
+</html>
