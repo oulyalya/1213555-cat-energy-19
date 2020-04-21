@@ -1,0 +1,55 @@
+.container.container-temp {
+  min-width: $mobile-width;
+  padding: 0 $mobile-pads;
+  margin: 0 auto;
+  border: 1px solid yellow;
+}
+
+.form__intro {
+  font-size: 14px;
+  line-height: 1.29em;
+  font-weight: 400;
+  color: $text-one;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+.form__fieldset {
+  margin-top: 0;
+  padding-left: 0;
+  border: 0 none;
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+}
+
+.form__label {
+  @include caps;
+  width: auto;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 1.13em;
+  color: $text-two;
+
+
+  &--text {
+    max-width: 100px;
+  }
+}
+
+.form__input-text {
+  align-self: flex-end;
+  flex-grow: 1;   //  ??? какие это сво-во может преподнести сюрпризы?
+  width: 140px;   //  ??? какие это сво-во может преподнести сюрпризы?
+  height: 45px;
+}
+
+

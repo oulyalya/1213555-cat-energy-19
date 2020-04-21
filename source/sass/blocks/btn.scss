@@ -1,0 +1,80 @@
+.btn {
+  @include caps;
+  display: inline-block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: $font-main;
+  font-size: 14px;
+  line-height: 1.29em;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  background-color: $theme-color;
+  border: 0 none;
+
+  &:hover {
+    background-color: $theme-color-dark;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $theme-color-dark;
+  }
+
+  &--product {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+
+  &--extra-goods {
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.25em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @include desktop {
+      width: auto;
+      min-width: 245px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &--secondary {
+    color: $text-three;
+    background-color: $additional-light;
+
+    &:hover {
+      background-color: $additional-dark;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+      background-color: $additional-dark;
+    }
+  }
+
+  &--show-all {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.25em;
+    font-weight: 400;
+
+    @include tablet {
+      align-self: flex-end;
+      margin-top: auto;
+    }
+  }
+
+  // @include tablet {
+  //   width: auto;
+  //   padding-left: 27px;
+  //   padding-right: 27px;
+  // }
+}
