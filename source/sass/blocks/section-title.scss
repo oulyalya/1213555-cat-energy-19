@@ -10,27 +10,6 @@
   }
 }
 
-.section-title--bg {
+.section-title__bg {
   @include section-title-bg(15px);
-}
-
-.section-title--line {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: calc(100vw - #{$mobile-pads});
-    width: 100vw;
-    height: 3px;
-    background-color: $theme-color;
-    z-index: -1;
-
-    @include tablet {
-      left: calc((100vw - #{$tablet-width}) / -2);
-    }
-
-    @include desktop {
-      left: calc((100vw - #{$desktop-width}) / -2);
-    }
-  }
 }

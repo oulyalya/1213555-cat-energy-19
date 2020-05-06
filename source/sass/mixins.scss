@@ -10,6 +10,17 @@
   }
 }
 
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
 @mixin caps {
   text-transform: uppercase;
 }
@@ -17,7 +28,9 @@
 @mixin list-style-none {
   list-style: none;
   margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
 // фон для заголовков с зелеёной полоской
@@ -25,5 +38,14 @@
   padding-left: $pad;
   padding-right: $pad;
   margin-left: calc(#{$pad} * -1);
-  background-color: yellow;
+  background-color: white;
+}
+
+// серая рамка для полей формы
+@mixin border50 {
+  border: 1px solid lighten($border-dark, 0.5);
+}
+
+@mixin border100 {
+  border: 1px solid $border-dark;
 }

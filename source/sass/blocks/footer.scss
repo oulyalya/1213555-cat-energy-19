@@ -1,0 +1,16 @@
+.page-footer {
+  background-color: $additional-light;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    min-height: 150px;
+  }
+}

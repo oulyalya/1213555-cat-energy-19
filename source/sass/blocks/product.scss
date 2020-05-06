@@ -64,22 +64,36 @@
   }
 }
 
+.product__img-wrapper {
+  @include tablet {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 208px;
+  }
+}
+
 .product__img {
+  position: relative;
   display: block;
   width: 140px;
   height: 144px;
+  margin-top: 1px;
 
   @include tablet {
     position: absolute;
     left: 50%;
-    top: -30px;
+    bottom: 0;
     transform: translateX(-50%);
-    width: 163px;
-    height: 174px;
-  }
-
-  @include desktop {
-    top: -55px;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
   }
 }
 

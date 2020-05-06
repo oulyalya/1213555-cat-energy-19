@@ -1,0 +1,10 @@
+.example__title {
+  @extend .section-title;
+  font-size: 36px;
+  line-height: 1.67em;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 1em;
+  }
+}

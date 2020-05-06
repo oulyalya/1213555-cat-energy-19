@@ -1,0 +1,83 @@
+.first-screen {
+  @include desktop {
+    background-image: linear-gradient(to right, transparent, transparent 50%, $theme-color 50%, $theme-color 100%);
+  }
+}
+
+.first-screen__wrapper {
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, $theme-color, $theme-color 305px, transparent 305px, transparent 100%);
+  background-size: auto 270px, 320px 305px, 100% 305px;
+  background-position: 50% 167px, 50% 0, 0 0;
+  text-align: center;
+  // нет просто фонового цвета на случай, если не сработает хотя бы градиент
+
+  @include tablet {
+    padding-bottom: 544px;
+    text-align: left;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-size: 709px 609px;
+    background-position: 50% 100%;
+  }
+
+  @include desktop {
+    padding-top: 155px;
+    padding-bottom: 188px;
+    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
+    background-size: 552px 499px, 720px 696px;
+    background-position: 60% 140px, 110% 0;
+  }
+}
+
+.first-screen__title {
+  margin-bottom: 19px;
+  font-size: 36px;
+  line-height: 1em;
+  font-weight: 400;
+  color: white;
+
+  @include tablet {
+    margin-left: 120px;
+    font-size: 60px;
+    color: $text-one;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin-left: 80px;
+  }
+}
+
+.first-screen__descr {
+  @include caps;
+  margin-bottom: 300px;
+  font-size: 14px;
+  line-height: 1em;
+  color: white;
+
+  @include tablet {
+    margin-left: 120px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: $text-one;
+    text-align: left;
+  }
+
+  @include desktop {
+    margin-left: 80px;
+  }
+}
+
+.first-screen__btn {
+  @include tablet {
+    width: auto;
+    margin-left: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include desktop {
+    margin-left: 80px;
+  }
+}

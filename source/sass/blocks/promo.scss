@@ -1,65 +1,46 @@
 .promo {
+  position: relative;
   display: block;
   width: 100%;
   padding-left: 21%;
   padding-right: 21%;
-  padding-top: 63px;
+  padding-top: 190px;
   padding-bottom: 25px;
   color: #ffffff;
+  text-align: center;
   background-color: $theme-color;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
+  background-position: 50% 65px, 50% 0;
+  background-size: 56px 61px, 100% auto;
 
   @include tablet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
     min-height: 200px;
-    padding-left: 12.5%;
-    padding-right: 14.5%;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-left: 424px;
+    padding-top: 65px;
     margin-bottom: 76px;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-position: 91px 65px, 50% 0;
+    background-size: 56px 61px, 100% auto;
   }
 
   @include desktop {
-    display: block;
     width: 245px;
     min-height: 289px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 65px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-top: 190px;
     padding-bottom: 25px;
-  }
-}
-
-.promo__icon {
-  display: block;
-  width: 58px;
-  height: 62px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 62px;
-  background-color: red;
-  background-repeat: no-repeat;
-
-  &--present {
-    background-image: url();
-  }
-
-  @include tablet {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  @include desktop {
-    width: 60px;
-    margin-left: auto;
-    margin-bottom: 53px;
+    text-align: center;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+    background-position: 50% 65px, 50% 0;
+    background-size: 56px 61px, 100% auto;
   }
 }
 
 .promo__text {
+  position: relative;
+  margin: 0;
   font-family: $font-secondary;
   font-size: 16px;
   line-height: 1.25em;
@@ -69,17 +50,12 @@
   @include tablet {
     min-width: 160px;
     max-width: 35%;
-    margin-left: auto;
-    padding-top: 7px;
     text-align: left;
   }
 
   @include desktop {
     width: 180px;
     max-width: 165px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
   }
 }
-
