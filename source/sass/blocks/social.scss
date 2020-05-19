@@ -3,13 +3,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   &::before,
   &::after {
@@ -39,19 +37,80 @@
     width: auto;
     padding: 0;
   }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+  }
 }
 
 .social__link {
   display: block;
-  margin-right: 25px;
+  min-width: 23px;
 
-  &:last-child {
-    margin-right: 0;
+  @include tablet {
+    min-width: 30px;
+    padding-left: 20px;
+  }
+
+  &--vk {
+    margin-right: 36px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include desktop {
+      margin-right: 30px;
+    }
+  }
+
+  &--ig {
+    margin-right: 35px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include desktop {
+      margin-right: 30px;
+    }
   }
 }
 
 .social__icon {
   fill: #666666;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+
+    @include tablet {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--ig {
+    width: 17px;
+    height: 17px;
+
+    @include tablet {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+
+    @include tablet {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }
 
 .social__link:hover .social__icon {

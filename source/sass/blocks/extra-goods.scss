@@ -1,3 +1,12 @@
+.extra-goods {
+  margin-top: 69px;
+  margin-bottom: 35px;
+
+  @include desktop {
+    margin-bottom: 85px;
+  }
+}
+
 .extra-goods__flex-wrapper {
   @include desktop {
     display: flex;
@@ -7,8 +16,24 @@
   }
 }
 
+.extra-goods__section-title {
+  @include section-title;
+  margin-top: 30px;
+  margin-bottom: 35px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    margin-top: 77px;
+    outline: 1px solid red;
+  }
+}
+
 .extra-goods__items {
   width: 100%;
+  margin-bottom: 38px;
 
   @include tablet {
     margin-bottom: 69px;
@@ -16,13 +41,14 @@
 
   @include desktop {
     width: 895px;
+    margin-bottom: 0;
   }
 }
 
 .extra-goods__item {
   display: block;
-  padding-top: 14px;
-  padding-bottom: 17px;
+  padding-top: 3px;
+  padding-bottom: 16px;
   border-top: 1px solid $border-dark;
 
   &:last-child {
@@ -36,7 +62,7 @@
     align-items: bottom;
     margin-bottom: -1px;
     padding-top: 15px;
-    padding-bottom: 26px;
+    padding-bottom: 28px;
     padding-left: 5.4%;
     padding-right: 5.4%;
     border-left: 1px solid $border-dark;
@@ -64,9 +90,7 @@
 
 .extra-goods__title {
   @include caps;
-  margin: 0;
   margin-bottom: -1px;
-  // margin-top: 0;
   font-size: 16px;
   line-height: 1em;
   font-weight: 400;
@@ -82,8 +106,8 @@
   }
 
   @include desktop {
-    width: 320px;
-    margin-right: 20px;
+    width: 350px;
+    margin-right: auto;
   }
 }
 
@@ -92,6 +116,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 10px;
   font-family: $font-secondary;
   font-size: 14px;
   line-height: 1em;
@@ -101,7 +126,7 @@
     align-self: flex-end;
     width: 65%;
     margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 16px;
     line-height: 1em;
   }
@@ -109,7 +134,8 @@
   @include desktop {
     align-items: flex-start;
     max-width: 33%;
-    margin-right: 39px;
+    margin-left: 60px;
+    margin-right: 26px;
     margin-bottom: 0;
     padding-bottom: 6px;
   }
@@ -129,9 +155,8 @@
   }
 
   @include desktop {
-    width: 193px;
-    margin-left: auto;
-    margin-right: 20px;
+    width: 280px;
+    margin-right: 60px;
     padding-top: 0;
     text-align: left;
   }
@@ -147,5 +172,11 @@
     max-width: 25%;
     margin-left: 8px;
     text-align: right;
+  }
+
+  @include desktop {
+    min-width: 55px;
+    max-width: auto;
+    text-align: left;
   }
 }

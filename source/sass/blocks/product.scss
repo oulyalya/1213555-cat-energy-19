@@ -11,10 +11,10 @@
 
   @include tablet {
     width: 324px;
-    margin-bottom: 140px;
+    margin-top: 142px;
     padding-left: 37px;
     padding-right: 37px;
-    padding-top: 145px;
+    padding-top: 147px;
     padding-bottom: 39px;
     background-color: $additional-light;
   }
@@ -28,7 +28,7 @@
     margin-top: 142px;
     padding-left: 38px;
     padding-right: 38px;
-    padding-top: 148px;
+    padding-top: 146px;
   }
 
   &::before,
@@ -67,7 +67,7 @@
 .product__img-wrapper {
   @include tablet {
     position: absolute;
-    top: -50px;
+    top: -82px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -150,7 +150,7 @@
   @include tablet {
     font-size: 16px;
     line-height: 1em;
-    margin-bottom: 21px;
+    margin-bottom: 24px;
 
     & tr {
       border-bottom: 1px solid $border-dark;
@@ -159,11 +159,13 @@
     & th,
     & td {
       padding-top: 8px;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
     }
   }
 
   @include desktop {
+    margin-bottom: 19px;
+
     & th,
     & td {
       padding-bottom: 8px;

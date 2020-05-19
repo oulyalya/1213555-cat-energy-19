@@ -1,10 +1,15 @@
 .program__wrapper {
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
   @include desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 74px;
   }
 }
 
@@ -12,27 +17,29 @@
   position: relative;
   width: 100%;
   background-color: $additional-light;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 22px;
   padding-right: 22px;
-  margin-bottom: 50px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-bottom: 23px;
 
   @include tablet {
     min-height: 372px;
+    margin-bottom: 27px;
     padding-left: 52px;
     padding-right: 200px;
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 41px;
   }
 
   @include desktop {
     width: 570px;
     min-height: 372px;
+    margin-bottom: 0;
     padding-right: 56px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &::before,
@@ -121,7 +128,8 @@
 
 .program__title {
   @include caps;
-  margin-left: 78px;
+  margin-left: 70px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 1.55em;
   font-weight: 400;
@@ -129,6 +137,7 @@
 
   @include tablet {
     margin-top: 0;
+    margin-bottom: 25px;
     margin-left: 0;
     font-size: 36px;
     line-height: 1.02em;
@@ -141,13 +150,14 @@
 }
 
 .program__description {
+  margin-bottom: 20px;
   font-family: $font-secondary;
   font-size: 14px;
   line-height: 1.29em;
 
   @include tablet {
     max-width: 372px;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
     font-size: 16px;
     line-height: 1.5em;
   }
@@ -164,6 +174,7 @@
 
   @include desktop {
     max-width: 465px;
+    margin-bottom: 8px;
   }
 }
 
@@ -191,5 +202,40 @@
     @include tablet {
       display: none;
     }
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.program__link-text {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    display: block;
+    width: 25px;
+    height: 12px;
+    transform: translate(10px, -50%);
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-right-arrow-long.svg");
+
+    @include tablet {
+      transform: translate(23px, -50%);
+    }
+  }
+
+  &:hover::after {
+    width: 34px;
+    height: 12px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

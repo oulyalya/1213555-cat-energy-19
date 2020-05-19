@@ -11,5 +11,9 @@
     height: 2px;
     background-color: $theme-color;
     z-index: -1;
+
+    @include tablet {
+      height: 3px;
+    }
   }
 }

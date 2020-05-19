@@ -6,7 +6,7 @@
 
   @include tablet {
     align-self: stretch;
-    padding-top: 76px;
+    padding-top: 36px;
     border: 1px solid $border-dark;
   }
 }
@@ -17,7 +17,7 @@
 
 .show-all__main {
   position: relative;
-  padding-top: 50px;
+  padding-top: 53px;
 
   @include caps;
   display: block;
@@ -28,7 +28,7 @@
 
   @include tablet {
     margin-bottom: 25px;
-    padding-top: 100px;
+    padding-top: 110px;
     font-size: 20px;
     line-height: 1em;
   }

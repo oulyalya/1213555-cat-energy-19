@@ -33,17 +33,34 @@
   padding-right: 0;
 }
 
+// заголовки секций
+@mixin section-title {
+  position: relative;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 400;
+  color: $text-one;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 1em;
+  }
+}
+
 // фон для заголовков с зелеёной полоской
-@mixin section-title-bg($pad) {
+@mixin title-bg($pad) {
   padding-left: $pad;
   padding-right: $pad;
   margin-left: calc(#{$pad} * -1);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
   background-color: white;
 }
 
 // серая рамка для полей формы
 @mixin border50 {
-  border: 1px solid lighten($border-dark, 0.5);
+  border: 1px solid #e6e6e6;
 }
 
 @mixin border100 {
