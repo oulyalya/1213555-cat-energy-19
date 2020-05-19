@@ -101,10 +101,12 @@
   color: $text-one;
 
   &--contacts {
+    max-width: 200px;
     margin-top: 26px;
     margin-bottom: 34px;
 
     @include tablet {
+      max-width: 100%;
       margin-bottom: 60px;
     }
 
@@ -248,6 +250,7 @@
 .form__input {
   @include caps;
   padding-left: 14px;
+  padding-top: 5px;
   font-family: $font-main;
   font-size: 16px;
   line-height: 1.26em;
@@ -273,7 +276,7 @@
 
     &:active,
     &:focus {
-      padding-left: 13px;
+      padding-left: 18px;
       outline: 0 none;
       border: 2px solid $text-three;
     }
@@ -316,7 +319,7 @@
 
     &:active,
     &:focus {
-      padding-left: 13px;
+      padding-left: 18px;
       outline: 0 none;
       border: 2px solid $text-three;
     }
@@ -434,6 +437,11 @@ input[type="checkbox"] {
       opacity: 0.3;
     }
   }
+}
+
+input[type="radio"]:focus + label::before,
+input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 2px $outline-color;
 }
 
 .form__input--radio:checked + label.form__label--radio::after {

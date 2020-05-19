@@ -190,6 +190,10 @@
     font-size: 14px;
     margin-top: -7px;
   }
+
+  @include desktop {
+    background-color: $additional-light;
+  }
 }
 
 .example__stats-total {
