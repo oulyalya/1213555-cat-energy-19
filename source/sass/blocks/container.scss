@@ -1,8 +1,8 @@
 .container {
+  position: relative;
   min-width: $mobile-width;
   margin: 0 auto;
   padding: 0 $mobile-pads;
-  border: 1px solid red;
 
   @include tablet {
     padding: 0 $tablet-pads;

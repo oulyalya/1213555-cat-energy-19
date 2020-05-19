@@ -11,10 +11,10 @@
 
   @include tablet {
     width: 324px;
-    margin-bottom: 140px;
+    margin-top: 142px;
     padding-left: 37px;
     padding-right: 37px;
-    padding-top: 145px;
+    padding-top: 147px;
     padding-bottom: 39px;
     background-color: $additional-light;
   }
@@ -28,7 +28,7 @@
     margin-top: 142px;
     padding-left: 38px;
     padding-right: 38px;
-    padding-top: 148px;
+    padding-top: 146px;
   }
 
   &::before,
@@ -64,22 +64,36 @@
   }
 }
 
+.product__img-wrapper {
+  @include tablet {
+    position: absolute;
+    top: -82px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 208px;
+  }
+}
+
 .product__img {
+  position: relative;
   display: block;
   width: 140px;
   height: 144px;
+  margin-top: 1px;
 
   @include tablet {
     position: absolute;
     left: 50%;
-    top: -30px;
+    bottom: 0;
     transform: translateX(-50%);
-    width: 163px;
-    height: 174px;
-  }
-
-  @include desktop {
-    top: -55px;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
   }
 }
 
@@ -136,7 +150,7 @@
   @include tablet {
     font-size: 16px;
     line-height: 1em;
-    margin-bottom: 21px;
+    margin-bottom: 24px;
 
     & tr {
       border-bottom: 1px solid $border-dark;
@@ -145,11 +159,13 @@
     & th,
     & td {
       padding-top: 8px;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
     }
   }
 
   @include desktop {
+    margin-bottom: 19px;
+
     & th,
     & td {
       padding-bottom: 8px;

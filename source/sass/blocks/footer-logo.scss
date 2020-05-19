@@ -1,0 +1,24 @@
+.page-footer__logo {
+  margin-top: 39px;
+  margin-bottom: 31px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.page-footer__logo-link {
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__logo-img {
+  display: block;
+}

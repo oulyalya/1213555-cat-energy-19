@@ -6,7 +6,7 @@
 
   @include tablet {
     align-self: stretch;
-    padding-top: 76px;
+    padding-top: 36px;
     border: 1px solid $border-dark;
   }
 }
@@ -15,33 +15,10 @@
   text-align: center;
 }
 
-// .show-all__plus {
-//   position: relative;
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     display: block;
-//     width: 2px;
-//     height: 31px;
-//     background-color: $border-dark;
-
-//     @include tablet {
-//       width: 1px;
-//       height: 60px;
-//       top: -40px;
-//     }
-//   }
-
-//   &::after {
-//     transform: rotate(90deg);
-//   }
-// }
-
 .show-all__main {
+  position: relative;
+  padding-top: 53px;
+
   @include caps;
   display: block;
   margin-bottom: 10px;
@@ -51,8 +28,31 @@
 
   @include tablet {
     margin-bottom: 25px;
+    padding-top: 110px;
     font-size: 20px;
     line-height: 1em;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 31px;
+    height: 31px;
+    opacity: 0.2;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 31px 31px;
+
+    @include tablet {
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/icon-plus.svg");
+      background-size: 61px 61px;
+    }
   }
 }
 

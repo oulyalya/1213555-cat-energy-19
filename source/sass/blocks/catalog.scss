@@ -11,10 +11,6 @@
 
   @include desktop {
     max-width: $desktop-width;
-    justify-content: space-around;
-  }
-
-  @include desktop {
     justify-content: space-between;
   }
 }

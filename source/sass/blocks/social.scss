@@ -1,0 +1,123 @@
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $text-three;
+    opacity: 0.1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include tablet {
+    width: auto;
+    padding: 0;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+  }
+}
+
+.social__link {
+  display: block;
+  min-width: 23px;
+
+  @include tablet {
+    min-width: 30px;
+    padding-left: 20px;
+  }
+
+  &--vk {
+    margin-right: 36px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include desktop {
+      margin-right: 30px;
+    }
+  }
+
+  &--ig {
+    margin-right: 35px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include desktop {
+      margin-right: 30px;
+    }
+  }
+}
+
+.social__icon {
+  fill: #666666;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+
+    @include tablet {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--ig {
+    width: 17px;
+    height: 17px;
+
+    @include tablet {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+
+    @include tablet {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+.social__link:hover .social__icon {
+  fill: $theme-color;
+}
+
+.social__link:active .social__icon {
+  fill: $theme-color;
+  opacity: 0.3;
+}

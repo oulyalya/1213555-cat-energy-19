@@ -1,0 +1,153 @@
+.features {
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+}
+
+.features__title {
+  @include section-title;
+  margin-top: 17px;
+  margin-bottom: 35px;
+  font-size: 36px;
+  line-height: 1.67em;
+
+  @include tablet {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 1em;
+  }
+}
+
+.features__list {
+  @include list-style-none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+  }
+}
+
+.features__item {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+  padding-left: 80px;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 1.29em;
+
+  @include tablet {
+    max-width: 245px;
+    margin-right: 80px;
+    margin-bottom: 133px;
+    padding-left: 0;
+    padding-top: 112px;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    &:nth-child(even) {
+      margin-left: auto;
+
+      @include desktop {
+        margin-left: 0;
+      }
+    }
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 100px;
+
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include desktop {
+    margin-right: 0;
+    margin-bottom: 65px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 60px;
+    height: 60px;
+    background-color: $theme-color;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    @include tablet {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    display: none;
+
+    @include tablet {
+      position: absolute;
+      left: 118px;
+      top: -40px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      font-family: $font-main;
+      font-weight: 400;
+      font-size: 281px;
+      line-height: 1em;
+      color: $additional-light;
+      z-index: -1;
+    }
+  }
+}
+
+.features__item--nutrition {
+  &::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &::after {
+    content: "1";
+  }
+}
+
+.features__item--powder {
+  &::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &::after {
+    content: "2";
+  }
+}
+
+.features__item--meals {
+  &::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &::after {
+    content: "3";
+  }
+}
+
+.features__item--time {
+  &::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  &::after {
+    content: "4";
+  }
+}
