@@ -482,7 +482,7 @@ input[type="checkbox"]:focus + label::before {
   display: block;
   z-index: 100;
 
-  @include desktop {
+  @include tablet {
     top: 2px;
     left: 9px;
     width: 22px;

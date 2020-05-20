@@ -26,9 +26,19 @@
     max-width: 245px;
     margin-bottom: 0;
     margin-top: 142px;
+    margin-right: auto;
+    margin-left: 50px;
     padding-left: 38px;
     padding-right: 38px;
     padding-top: 146px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(4n-3) {
+      margin-left: 0;
+    }
   }
 
   &::before,

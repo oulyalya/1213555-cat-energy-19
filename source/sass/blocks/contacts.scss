@@ -105,7 +105,7 @@
   width: auto;
   height: 400px;
   margin-top: -43px;
-  background-color: $additional-light;
+  background-color: $text-three;
   text-align: center;
   z-index: 5;
 
@@ -119,6 +119,7 @@
 }
 
 .contacts__map-img {
+  display: block;
   width: 320px;
   height: 400px;
   margin-left: auto;
