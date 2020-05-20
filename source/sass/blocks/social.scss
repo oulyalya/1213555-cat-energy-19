@@ -41,17 +41,19 @@
   @include desktop {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
 
 .social__link {
   display: block;
   min-width: 23px;
+  text-align: center;
 
   @include tablet {
     min-width: 30px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   &--vk {

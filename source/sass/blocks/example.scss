@@ -4,14 +4,15 @@
 
   @include tablet {
     padding-top: 45px;
-    background-color: transparent;
+    background-color: white;
+    background-image: linear-gradient(to top, $additional-light 0, $additional-light 180px, #ffffff 180px, #ffffff 100%);
     border-top: 1px solid $additional-light;
   }
 
   @include desktop {
     padding-top: 0;
     padding-bottom: 0;
-    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $additional-light 200px, $additional-light 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 200px, $additional-light 200px, $additional-light 100%);
     border-top: none;
   }
 }

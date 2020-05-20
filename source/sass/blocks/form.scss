@@ -105,6 +105,11 @@
     margin-top: 26px;
     margin-bottom: 34px;
 
+    & span {
+      display: inline-block;
+      vertical-align: top;
+    }
+
     @include tablet {
       max-width: 100%;
       margin-bottom: 60px;

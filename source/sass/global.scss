@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-*:focus,
-*:focus::before,
-*:focus::after {
-  outline: 2px solid $outline-color;
-}
-
 body {
   margin: 0;
   font-family: $font-main;
