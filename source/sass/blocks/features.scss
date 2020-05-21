@@ -53,8 +53,8 @@
     &:nth-child(even) {
       margin-left: auto;
 
-      @include desktop {
-        margin-left: 0;
+      @media (min-width: 1025px) {
+        margin: 0;
       }
     }
 
@@ -66,6 +66,11 @@
         margin-bottom: 0;
       }
     }
+  }
+
+
+  @media (min-width: 1025px) {
+    margin: 0;
   }
 
   @include desktop {

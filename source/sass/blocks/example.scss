@@ -4,14 +4,15 @@
 
   @include tablet {
     padding-top: 45px;
-    background-color: transparent;
+    background-color: white;
+    background-image: linear-gradient(to top, $additional-light 0, $additional-light 180px, #ffffff 180px, #ffffff 100%);
     border-top: 1px solid $additional-light;
   }
 
   @include desktop {
     padding-top: 0;
     padding-bottom: 0;
-    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $additional-light 200px, $additional-light 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 200px, $additional-light 200px, $additional-light 100%);
     border-top: none;
   }
 }
@@ -21,6 +22,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    overflow: hidden;
   }
 }
 
@@ -33,12 +35,16 @@
 
   @include desktop {
     width: 450px;
+    margin-right: auto;
+    flex-shrink: 0;
   }
 }
 
 .example__wrapper-slider {
   @include desktop {
-    width: 50%;
+    // width: 50%;
+    width: auto;
+    margin-left: auto;
     padding-left: 40px;
   }
 }
@@ -190,6 +196,10 @@
     font-size: 14px;
     margin-top: -7px;
   }
+
+  @include desktop {
+    background-color: $additional-light;
+  }
 }
 
 .example__stats-total {
@@ -200,7 +210,7 @@
   text-align: center;
 
   @include tablet {
-    max-width: 185px;
+    max-width: 300px;
     margin-left: auto;
     margin-bottom: 0;
     font-size: 20px;
