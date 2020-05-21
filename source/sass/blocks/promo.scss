@@ -28,9 +28,9 @@
     background-position: 91px 65px, 50% 0;
     background-size: 56px 61px, 100% auto;
 
-      @include retina {
-    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@2x.jpg");
-  }
+    @include retina {
+      background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
