@@ -18,6 +18,10 @@
   background-position: 50% 167px, 50% 0, 0 0;
   text-align: center;
 
+  @include retina {
+    background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg"), linear-gradient(to bottom, $theme-color, $theme-color 305px, transparent 305px, transparent 100%);
+  }
+
   @include tablet {
     padding-top: 10px;
     padding-bottom: 530px;
@@ -25,6 +29,10 @@
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-size: 709px 609px;
     background-position: 50% 100%;
+
+    @include retina {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
@@ -33,6 +41,10 @@
     background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
     background-size: 552px 499px, 720px 696px;
     background-position: 66% 140px, 113% 0;
+
+    @include retina {
+      background-image: url("../img/index-can-desktop@2x.png"), url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 
