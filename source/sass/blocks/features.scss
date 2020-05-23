@@ -120,6 +120,10 @@
 .features__item--nutrition {
   &::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &::after {
@@ -130,6 +134,10 @@
 .features__item--powder {
   &::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &::after {
@@ -140,6 +148,10 @@
 .features__item--meals {
   &::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &::after {
@@ -150,6 +162,10 @@
 .features__item--time {
   &::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @include retina {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 
   &::after {
