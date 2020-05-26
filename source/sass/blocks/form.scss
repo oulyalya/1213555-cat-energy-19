@@ -278,12 +278,16 @@
     &:hover {
       @include border100;
     }
+  }
 
-    &:active,
-    &:focus {
+  &:active,
+  &:focus {
+    padding-left: 13px;
+    outline: 0 none;
+    border: 2px solid $text-three;
+
+    @include tablet {
       padding-left: 18px;
-      outline: 0 none;
-      border: 2px solid $text-three;
     }
   }
 
@@ -332,11 +336,11 @@
 
   &::placeholder {
     color: $text-three;
+  }
 
-    @include tablet {
-      font-size: 20px;
-      line-height: 1em;
-    }
+  @include tablet {
+    font-size: 20px;
+    line-height: 1em;
   }
 }
 
@@ -496,6 +500,10 @@ input[type="checkbox"]:focus + label::before {
   top: 50%;
   transform: translateY(-50%);
   fill: $text-two;
+
+  &--email {
+    top: 51%;
+  }
 }
 
 input:active + .form__input-icon,

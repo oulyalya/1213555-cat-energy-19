@@ -34,7 +34,7 @@
 
 .features__item {
   position: relative;
-  display: block;
+  min-height: 60px;
   margin-bottom: 25px;
   padding-left: 80px;
   font-family: $font-secondary;
