@@ -20,8 +20,8 @@
   }
 
   &--off {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     background-image: none;
 
     &::before {
@@ -30,11 +30,12 @@
       top: 0;
       left: 0;
       display: block;
-      width: 19px;
-      height: 19px;
+      width: 26px;
+      height: 26px;
       transform: rotate(45deg);
       background-image: url("../img/icon-plus-mobile.svg");
       background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
@@ -73,6 +74,7 @@
 
 .main-nav-wrapper {
   text-align: center;
+  overflow: hidden;
 
   @include tablet {
     margin-bottom: 35px;
@@ -134,20 +136,33 @@
   }
 
   &:not(.main-nav__link--logo) {
+    position: relative;
     margin-bottom: -1px;
     padding-top: 20px;
     padding-bottom: 19px;
     font-size: 20px;
     line-height: 1.39em;
     text-align: center;
-    border-bottom: 1px solid $border-dark;
 
-    &:last-child {
-      border-bottom: 1px solid $border-dark;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100vw;
+      height: 2px;
+      margin-left: -$mobile-pads;
+      background-color: $additional-light;
 
       @include tablet {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @include tablet {
         margin-bottom: 0;
-        border: 0 none;
       }
 
       @include desktop {
@@ -218,7 +233,22 @@
   justify-content: space-between;
   width: 278px;
   min-height: 64px;
-  border-bottom: 1px solid $border-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $additional-light;
+
+    @include tablet {
+      display: none;
+    }
+  }
 
   @include tablet {
     position: static;

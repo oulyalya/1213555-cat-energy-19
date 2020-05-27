@@ -1,4 +1,6 @@
 .form {
+  overflow: hidden;
+
   @include tablet {
     padding-left: 40px;
     padding-right: 35px;

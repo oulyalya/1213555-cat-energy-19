@@ -2,6 +2,7 @@
   position: relative;
   background-color: $additional-light;
   z-index: 10;
+  overflow: hidden;
 }
 
 .contacts__wrapper {
@@ -12,11 +13,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: $additional-light;
+  // background-color: $additional-light ;
   z-index: 10;
+  // overflow: hidden;
 
   &::after {
     content: "";
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 50%;

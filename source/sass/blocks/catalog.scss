@@ -1,4 +1,6 @@
 .catalog {
+  overflow: hidden;
+
   @include tablet {
     display: flex;
     flex-direction: row;

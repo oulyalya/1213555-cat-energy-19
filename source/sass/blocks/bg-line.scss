@@ -6,19 +6,23 @@
     position: absolute;
     display: block;
     top: 14px;
-    left: 0;
-    width: 100%;
+    left: $mobile-pads;
+    width: calc(100% - #{$mobile-pads});
     height: 2px;
     background-color: $theme-color;
     z-index: -1;
 
     @include tablet {
+      width: 100vw;
       top: 18px;
+      left: 0;
+      margin-left: -$tablet-pads;
       height: 3px;
     }
 
     @include desktop {
       top: 22px;
+      left: 0;
     }
   }
 }

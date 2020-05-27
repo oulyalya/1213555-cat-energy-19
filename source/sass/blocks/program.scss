@@ -164,11 +164,7 @@
 
   &--pro {
     @include tablet {
-      max-width: 340px;
-    }
-
-    @include tablet {
-      max-width: auto;
+      max-width: 343px;
     }
   }
 
