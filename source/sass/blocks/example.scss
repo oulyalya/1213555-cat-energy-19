@@ -10,10 +10,22 @@
   }
 
   @include desktop {
+    position: relative;
     padding-top: 0;
     padding-bottom: 0;
-    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 200px, $additional-light 200px, $additional-light 100%);
     border-top: none;
+    background-image: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 450px;
+      background-image: linear-gradient(to right, $additional-light 0, $additional-light 1000px, #eaeaea 1000px, #eaeaea 100%);
+    }
   }
 }
 
@@ -42,7 +54,6 @@
 
 .example__wrapper-slider {
   @include desktop {
-    // width: 50%;
     width: auto;
     margin-left: auto;
     padding-left: 40px;
@@ -210,7 +221,7 @@
   text-align: center;
 
   @include tablet {
-    max-width: 300px;
+    max-width: 200px;
     margin-left: auto;
     margin-bottom: 0;
     font-size: 20px;

@@ -1,5 +1,5 @@
 .extra-goods {
-  margin-top: 69px;
+  margin-top: 17px;
   margin-bottom: 35px;
 
   @include desktop {
@@ -18,10 +18,11 @@
 
 .extra-goods__section-title {
   @include section-title;
-  margin-top: 30px;
+  margin-top: 28px;
   margin-bottom: 35px;
 
   @include tablet {
+    margin-top: 70px;
     margin-bottom: 80px;
   }
 

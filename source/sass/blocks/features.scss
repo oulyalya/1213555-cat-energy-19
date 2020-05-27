@@ -9,7 +9,7 @@
 .features__title {
   @include section-title;
   margin-top: 17px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 36px;
   line-height: 1.67em;
 
@@ -35,7 +35,7 @@
 .features__item {
   position: relative;
   min-height: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-left: 80px;
   font-family: $font-secondary;
   font-size: 14px;
@@ -89,6 +89,7 @@
     background-color: $theme-color;
     background-repeat: no-repeat;
     background-position: 50%;
+    background-size: 50px 50px;
 
     @include tablet {
       top: 0;

@@ -20,9 +20,13 @@
 
   @include tablet {
     margin-top: 35px;
-    margin-bottom: 68px;
+    margin-bottom: 50px;
     font-size: 20px;
     line-height: 1.5em;
+  }
+
+  @include desktop {
+    margin-bottom: 67px;
   }
 }
 
@@ -65,7 +69,11 @@
 
   &--text-half {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 2px;
+
+    @include tablet {
+      margin-bottom: 55px;
+    }
 
     @include desktop {
       width: 568px;
@@ -125,7 +133,7 @@
     margin-bottom: 35px;
 
     @include tablet {
-      margin-top: 45px;
+      margin-top: 50px;
       margin-bottom: 80px;
     }
 
@@ -307,16 +315,34 @@
 
     &:active,
     &:focus {
-      padding-top: 9px;
+      margin-top: -1px;
+      margin-bottom: -1px;
+      padding-top: 10px;
       padding-left: 13px;
       outline: 0 none;
       border: 2px solid $text-three;
+
+      @include tablet {
+        margin-bottom: 1px;
+      }
     }
   }
 
   &--radio,
   &--checkbox {
     @include visually-hidden;
+
+    &:disabled,
+    &:disabled:checked {
+      & + label::before,
+      & + label::after {
+        opacity: 0.3;
+      }
+    }
+
+    &:focus + label::before {
+      box-shadow: 0 0 0 2px $text-three;
+    }
   }
 
   &--icon {
@@ -328,9 +354,13 @@
 
     &:active,
     &:focus {
-      padding-left: 18px;
+      padding-left: 13px;
       outline: 0 none;
       border: 2px solid $text-three;
+
+      @include tablet {
+        padding-left: 18px;
+      }
     }
   }
 
@@ -437,22 +467,6 @@
   }
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  &:disabled,
-  &:disabled:checked {
-    & + label::before,
-    & + label::after {
-      opacity: 0.3;
-    }
-  }
-}
-
-input[type="radio"]:focus + label::before,
-input[type="checkbox"]:focus + label::before {
-  box-shadow: 0 0 0 2px $outline-color;
-}
-
 .form__input--radio:checked + label.form__label--radio::after {
   content: "";
   position: absolute;
@@ -503,6 +517,7 @@ input[type="checkbox"]:focus + label::before {
 
   &--email {
     top: 51%;
+    right: 18px;
   }
 }
 
@@ -563,7 +578,7 @@ input:focus + .form__input-icon {
   }
 }
 
-.error {
+.form__input-error {
   border: 1px solid transparent;
   outline: 2px solid $error-color;
 

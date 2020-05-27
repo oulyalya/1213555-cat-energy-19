@@ -1,0 +1,12 @@
+.section-title-bg {
+  @include title-bg(15px);
+
+  @include tablet {
+    @include title-bg(38px);
+    margin-left: 0;
+  }
+
+  @include desktop {
+    @include title-bg(35px);
+  }
+}
